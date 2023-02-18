@@ -6,11 +6,12 @@
 int main(void)
 {
 	char v;
+	char str[2];
 
 	v = 'a';
 	while
 		(v <= 'z') {
-			if ((v != 'q' && v != 'e') && v <= 'Z')
+			if (str[v] != 'q' && str[v] != 'e' && v <= 'Z')
 				putchar(v);
 			v++;
 		}
