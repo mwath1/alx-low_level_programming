@@ -11,7 +11,7 @@ char *cap_string(char *str)
 
 	while (str[g])
 	{
-		while (!(str[g] >= 'a') && (str[g] <= 'z'))
+		while (!(str[g] >= 'a' && str[g] <= 'z'))
 			g++;
 		if (str[g - 1] == '' ||
 				str[g - 1] == '\t' ||
