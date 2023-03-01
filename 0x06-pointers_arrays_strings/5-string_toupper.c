@@ -2,13 +2,14 @@
 /**
  * string_toupper - changes all lowercase to a string uppercase
  * @n: character pointer
- * Return: 0
+ * Return: n
  */
 
 char *string_toupper(char *n)
 {
-	int v = 0;
+	int v;
 
+	v = 0;
 	while (n[v] != '\0')
 	{
 		if (n[v] >= 'a' && n[v] <= 'z')
