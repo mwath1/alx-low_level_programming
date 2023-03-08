@@ -1,12 +1,13 @@
 #include "main.h"
 
+int actual_prime(int n, int i);
 /**
- * is_prime_number - checks for prime numbers
+ * _prime_number - checks for prime numbers
  * @n: value to b checked
  * Return: 1 if integer is prime number , else 0
  */
 
-int is_prime_number(int n)
+int _prime_number(int n)
 {
 	if (n <= 1)
 		return (0);
