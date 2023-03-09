@@ -1,31 +1,41 @@
 #include "main.h"
 
-int actual_prime(int n, int i);
 /**
- * is_prime_number - checks for prime numbers
- * @n: value to b checked
- * Return: 1 if integer is prime number , else 0
+ * prime_no - function declaration
+ * @num: value for test
+ * @num2: the divisor
+ * Return: 1 if prime number,otherwise 0
  */
 
-int is_prime_number(int n)
+int prime_no(int num, int num2);
+
+/**
+ * is_prime_number - function defination
+ * @n: value to test
+ * Return: 1 if prime number,otherwise 0
+ */
+
+int is_prime_number(int n);
+
+/**
+ * prime_no - check if no is prime or not
+ * @num: value for test
+ * @num2: the divisor
+ * Return: 1 if prime number,otherwise 0
+ */
+
+int prime_no(int num, int num2)
 {
-	if (n <= 1)
+	if (num % num2 == 0)
+	{
 		return (0);
-	return (actual_prime(n, n - 1));
-}
-
-/**
- * actual_prime - recursively ckecks for prime number
- * @n: integer to be ckecked
- * @i: iteration
- * Return: i if n is prime, 0 if not
- */
-
-int actual_prime(int n, int i)
-{
-	if (i == 1)
+	}
+	else if (num2 == num / 2)
+	{
 		return (1);
-	if (n % i == 0 && i > 0)
-		return (0);
-	return (actual_pime(n, i - 1));
+	}
+	else
+	{
+		return (prime_no(num, num2 + 1));
+	}
 }
