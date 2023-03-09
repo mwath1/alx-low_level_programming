@@ -9,37 +9,54 @@
 
 int actual_sqrt_recursion(int m, int i);
 /**
- * actual_sqrt_recursion - function defination
+ * _sqrt_recursion - function defination
  * @n: value to be rooted
  * Return: square root
  */
 int _sqrt_recursion(int n);
 /**
- * _sqrt_recursion - function defination
- * @n: value to be rooted
- * Return: square root
- */
-
-int _sqrt_recursion(int n)
-{
-	if (n < 0)
-		return (-1);
-	if (n == 0)
-		return (actual_sqrt_recursion(m, 0));
-}
-
-/**
- * actual_sqrt_recursion - recurs to find natural square root
+ * actual_sqrt_recursion - function defination
  * @m: value to be rooted
- * @i: iterator
+ * @i: root to be tested
  * Return: square root
  */
 
 int actual_sqrt_recursion(int m, int i)
 {
-	if (i * i > m)
-		return (-1);
-	if (i * i == m)
+	if ((i * i) == m)
+	{
 		return (i);
-	return (actual_sqrt_recursion(m, i + 1));
+	}
+	else if (i == m / 2)
+	{
+		return (-1);
+	}
+	else
+	{
+		return (actual_sqrt_recursion(m, i + 1));
+	}
+}
+
+/**
+ * _sqrt_recursion - recurs to find natural square root
+ * @n: value to return square
+ * Return: square root
+ */
+
+int _sqrt_recursion(int n)
+{
+	int root = 0;
+
+	if (n < 0)
+	{
+		return (-1);
+	}
+	else if (n == 1)
+	{
+		return (1);
+	}
+	else
+	{
+		return (actual_sqrt_recursion(n, root));
+	}
 }
