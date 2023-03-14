@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  * _strdup - returns pointer to newly allocated space in memory
  * @str: duplicated string
@@ -19,7 +20,7 @@ char *_strdup(char *str)
 	dup = malloc(sizeof(char) * (len + 1));
 	if (dup == NULL)
 		return (NULL);
-	whilen((dup[i] = str[i]) != '\0')
+	while ((dup[i] = str[i]) != '\0')
 		i++;
 	return (dup);
 }
