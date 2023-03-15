@@ -8,6 +8,7 @@
 int main(int argc, char *argv[])
 {
 	int i = 0, j = 0;
+
 	if (argc == 3)
 	{
 		i = atoi(argv[1]);
