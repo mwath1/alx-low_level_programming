@@ -18,18 +18,22 @@ void print_all(const char * const format, ...)
 		{
 			switch (format[i])
 			{
-				case 'c';
+				case 'c':
 				printf("%s%c", ptr, va_arg(args, int));
-				case 'i';
+				break;
+				case 'i':
 				printf("%s%d", ptr, va_arg(args, int));
-				case 'f';
+				break;
+				case 'f':
 				printf("%s%f", ptr, va_arg(args, double));
-				case 's';
+				break;
+				case 's':
 				str = va_arg(args, char *);
 				if (!str)
 					str = "(nil)";
 				printf("%s%s", ptr, str);
 				break;
+				default:
 				i++;
 				continue;
 			}
