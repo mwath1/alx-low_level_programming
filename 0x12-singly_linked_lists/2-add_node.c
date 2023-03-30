@@ -1,4 +1,4 @@
-include "lists.h"
+#include "lists.h"
 
 /**
  * add_node - adds a new node at the end of a list_t list.
@@ -15,7 +15,7 @@ list_t *add_node(list_t **head, const char *str)
 	while (str[len])
 	len++;
 
-	new = malloc(sizeof(list_t));
+	newptr = malloc(sizeof(list_t));
 	if (!newptr)
 		return (NULL);
 
