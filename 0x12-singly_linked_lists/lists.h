@@ -3,6 +3,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 /***** singly linked list node ****/
 /**
@@ -11,7 +12,7 @@
  * @len: lenght of string
  * @next: point to next node
  */
-typedef struct list_t
+typedef struct list_s
 {
 	char *str;
 	unsigned int len;
