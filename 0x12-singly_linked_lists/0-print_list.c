@@ -1,5 +1,6 @@
-#include "lists.h"
 #include <stdio.h>
+#include "lists.h"
+
 /**
  * print_list - prints all elements in list
  * @h: holds elements to be printed
